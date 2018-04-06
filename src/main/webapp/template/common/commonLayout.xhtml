@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<h:outputStylesheet name="common-style.css" library="css" />
+		<h:outputStylesheet name="jabber-component.css" library="css" />
+
+        <h:outputScript library="primefaces" name="jquery/jquery-1.12.4.min.js" target="head" />
+
+        <!--<h:outputScript library="js" name="caxl/jabberwerx.ui.js" target="head" />-->
+        <!--<h:outputScript library="js" name="caxl/jabber-component.js" target="head" />-->
+
+        <script type="text/javascript" src="resources/js/caxl/jabberwerx.ui.js"></script>
+        <script type="text/javascript" src="resources/js/caxl/jabber-component.js"></script>
+
+	</h:head>
+    
+    <h:body>
+
+	<div id="page">
+		
+		<div id="header">
+			<ui:insert name="header" >
+				<ui:include src="/template/common/commonHeader.xhtml" />
+			</ui:insert>
+	    </div>
+	    
+	    <div id="content">
+			<ui:insert name="content" >
+				<ui:include src="/template/common/commonContent.xhtml" />
+			</ui:insert>
+		</div>
+
+		<div id="chat">
+			<ui:insert name="chat" >
+				<ui:include src="/template/common/commonChat.xhtml" />
+			</ui:insert>
+		</div>
+
+		<div class="cd-main-content">
+			<btn class="cd-btn">Jabber Chat</btn>
+		</div>
+		    
+	    <div id="footer">
+	    	<ui:insert name="footer" >
+	    		<ui:include src="/template/common/commonFooter.xhtml" />
+	    	</ui:insert>
+    	</div>
+    	
+    </div>
+
+    <script>
+        $('.cd-btn').click( function(event){
+            console.log("BTN click");
+            event.preventDefault();
+            $('.cd-panel').addClass('is-visible');
+            $('.auth_submit').click();
+            return false;
+        });
+        $('.cd-close-btn').click( function(event){
+            if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-close-btn') ) {
+                $('.cd-panel').removeClass('is-visible');
+                event.preventDefault();
+            }
+            return false;
+        });
+
+    </script>
+    
+    </h:body>
+
+</html>

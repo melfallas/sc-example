@@ -1,0 +1,43 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:panelGroup>
+
+        <div class="cd-panel from-right">
+            <header class="cd-panel-header">
+                <h3>Jabber Chat</h3>
+                <a href="#0" class="cd-close-btn">Cerrar</a>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div class="my_auth"></div>
+                    <div class="my_client">
+                        <div class="row">
+                            <div class="explorator">
+                                <h4>Estado:</h4>
+                                <div class="my_presence" style="width:50%"></div>
+                                <h4>Contactos</h4>
+                                <div class="my_actions">
+                                    <input type="button" class="btn option_btn add_contact_btn" style="background-color: #337AB7;border-color: #337AB7; color:white;" value="Agregar Contacto"/>
+                                    <input type="button" class="btn remove_btn remove_contact_btn" style="background-color: #337AB7;border-color: #337AB7; color:white;" value="Quitar Contacto" disabled="true"/>
+                                </div>
+                                <div class="my_roster">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="composition">
+                                <div class="my_tabs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
+    </h:panelGroup>
+
+</ui:composition>
