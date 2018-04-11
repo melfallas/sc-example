@@ -19,24 +19,15 @@
             <h:outputText value="Last Name: " />
             <p:inputText value="#{user.lastName}" />
 
-            <p:commandButton value="Submit" update="greeting"
-              oncomplete="PF('greetingDialog').show()" />
+            <p:commandButton action="#{pageController.processPage1}" value="Page1" />
 
-            <p:commandButton onclick="#{pageController.processPage1}" value="Page1" />
           </h:panelGrid>
         </p:panel>
-
-        <p:dialog header="Greeting" widgetVar="greetingDialog"
-          modal="true" resizable="false">
-          <h:panelGrid id="greeting" columns="1" cellpadding="4">
-            <h:outputText value="#{user.showGreeting()}" />
-          </h:panelGrid>
-        </p:dialog>
-
 
 
       </h:form>
     </ui:define>
+
   </ui:composition>
 </h:body>
 </html>

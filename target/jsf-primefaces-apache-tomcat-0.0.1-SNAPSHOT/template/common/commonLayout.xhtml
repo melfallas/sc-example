@@ -14,8 +14,6 @@
 
         <h:outputScript library="primefaces" name="jquery/jquery-1.12.4.min.js" target="head" />
 
-        <script type="text/javascript" src="resources/caxl/jabberwerx.ui.js"></script>
-        <script type="text/javascript" src="resources/caxl/jabber-component.js"></script>
 	</h:head>
     
     <h:body>
@@ -39,37 +37,32 @@
 				<ui:include src="/template/common/commonChat.xhtml" />
 			</ui:insert>
 		</div>
-
-		<div class="cd-main-content">
-			<btn class="cd-btn">Jabber Chat</btn>
-		</div>
 		    
 	    <div id="footer">
 	    	<ui:insert name="footer" >
 	    		<ui:include src="/template/common/commonFooter.xhtml" />
 	    	</ui:insert>
     	</div>
+
+		<div class="cd-main-content">
+			<btn class="cd-btn">Jabber Chat</btn>
+		</div>
     	
     </div>
 
-    <script>
-        $('.cd-btn').click( function(event){
-            console.log("BTN click");
-            event.preventDefault();
-            $('.cd-panel').addClass('is-visible');
-            $('.auth_submit').click();
-            return false;
-        });
-        $('.cd-close-btn').click( function(event){
-            if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-close-btn') ) {
-                $('.cd-panel').removeClass('is-visible');
-                event.preventDefault();
-            }
-            return false;
-        });
+	<script>
+		$('.cd-btn').click( function(event){
+			console.log("BTN click");
+			$('.cd-panel').addClass('is-visible');
+		});
+		$('.cd-close-btn').click( function(event){
+			if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-close-btn') ) {
+				$('.cd-panel').removeClass('is-visible');
+			}
+		});
 
-    </script>
-    
+	</script>
+
     </h:body>
 
 </html>
