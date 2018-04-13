@@ -9,14 +9,14 @@
         <div class="cd-panel from-right">
             <header class="cd-panel-header">
                 <div>
-                    <h3 style="float: left">Jabber Chat</h3>
-                    <a href="#0" class="cd-close-btn">Cerrar</a>
+                    <h3 style="float: left">Jabber - #{user.username}</h3>
+                    <a href="#0" class="cd-close-btn">cerrar</a>
                 </div>
             </header>
 
             <div class="cd-panel-container">
                 <div class="cd-panel-content">
-                    <iframe class="jabber-frame" width="630" src="http://172.31.251.11:80/jabber?username=a"></iframe>
+                    <iframe class="jabber-frame" width="630" src="http://192.168.64.2:80/jabber-component?uid=#{user.username}"></iframe>
                 </div> <!-- cd-panel-content -->
             </div> <!-- cd-panel-container -->
         </div> <!-- cd-panel -->
