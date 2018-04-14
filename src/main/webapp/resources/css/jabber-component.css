@@ -169,6 +169,7 @@
     padding: 6px;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 1%;
 }
 .from-right .cd-panel-header, .from-left .cd-panel-header {
     top: -50px;
@@ -323,7 +324,7 @@
     height: 100%;
     padding: 27px 10px;
     overflow: auto;
-    background: white;
+    /*background: white;*/
     /* smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
 }

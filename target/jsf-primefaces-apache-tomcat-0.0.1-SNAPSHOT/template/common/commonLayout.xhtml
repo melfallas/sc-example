@@ -27,7 +27,7 @@
 	    </div>
 	    
 	    <div id="content">
-			<ui:insert name="content" >
+			<ui:insert name="content">
 				<ui:include src="/template/common/commonContent.xhtml" />
 			</ui:insert>
 		</div>
@@ -50,7 +50,7 @@
     	
     </div>
 
-	<script>
+	<script type="text/javascript">
 		$('.cd-btn').click( function(event){
 			console.log("BTN click");
 			$('.cd-panel').addClass('is-visible');
@@ -61,7 +61,15 @@
 			}
 		});
 
-	</script>
+        setTimeout(function(){
+            console.log("TESTING");
+            console.log($('#messageTest'));
+            $('#messageTest').click(function(e) {
+                console.log("Message Test");
+            });
+        }, 5000);
+
+    </script>
 
     </h:body>
 
