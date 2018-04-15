@@ -2,45 +2,18 @@
 
 .cd-main-content {
     text-align: center;
-    right:0;
-    top: 13%;
-    position: absolute;
-}
-.cd-main-content h1 {
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: #64788c;
-    padding: 4em 0;
 }
 .cd-main-content .cd-btn {
     position: relative;
     display: inline-block;
-    padding: 1em 2em;
-    background-color: #337AB7;
-    color: #ffffff;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.1);
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-}
-.no-touch .cd-main-content .cd-btn:hover {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
-}
-@media only screen and (min-width: 1170px) {
-    .cd-main-content h1 {
-        font-size: 32px;
-        font-size: 2rem;
-    }
+    width: 64px;
+    top: 5px;
 }
 
 .cd-panel {
     position: absolute;
     top: 0;
-
+    z-index: 999999999;
     visibility: hidden;
     -webkit-transition: visibility 0s 0.6s;
     -moz-transition: visibility 0s 0.6s;
@@ -148,7 +121,7 @@
 }
 .cd-panel-header {
     position: fixed;
-    width: 90%;
+    width: 540px;
     height: 50px;
     line-height: 50px;
     background: rgba(255, 255, 255, 0.96);
@@ -188,12 +161,12 @@
 }
 @media only screen and (min-width: 768px) {
     .cd-panel-header {
-        width: 70%;
+        width: 540px;
     }
 }
 @media only screen and (min-width: 1170px) {
     .cd-panel-header {
-        width: 50%;
+        width: 540px;
     }
 }
 
@@ -264,8 +237,8 @@
 
 .cd-panel-container {
     position: fixed;
-    width: 90%;
-    height: 100%;
+    width: 540px;
+    height: 670px;
     top: 0;
     background: #dbe2e9;
     z-index: 1;
@@ -307,12 +280,12 @@
 }
 @media only screen and (min-width: 768px) {
     .cd-panel-container {
-        width: 70%;
+        width: 540px;
     }
 }
 @media only screen and (min-width: 1170px) {
     .cd-panel-container {
-        width: 50%;
+        width: 540px;
     }
 }
 
@@ -322,7 +295,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 27px 10px;
     overflow: auto;
     /*background: white;*/
     /* smooth scrolling on touch devices */
@@ -347,52 +319,3 @@
 }
 
 /* END Side Panel Styles */
-
-/* START Chat Components */
-div.my_auth {
-    width:  325px;
-    margin: 20px auto;
-}
-div.my_client {
-    position: relative;
-}
-div.explorator {
-    float:      left;
-    width:      100%;
-    clear:      none;
-}
-div.composition {
-    width: 100%;
-}
-div.my_tabs {
-    position: absolute;
-    top: 370px;
-}
-div.my_actions {
-    padding-left:     5px;
-    padding-right:     5px;
-}
-div.username_div {
-    display: none;
-}
-div.password_div {
-    display: none;
-}
-div.submit_div {
-    display: none;
-}
-input.option_btn {
-    min-width:  160px;
-}
-input.remove_btn {
-    width:  160px;
-}
-.jabberwerx.auth_form {
-    border:  0;
-    background: white;
-}
-div.jabberwerx.roster{
-    height:200px;
-}
-
-/* END Chat Components */
