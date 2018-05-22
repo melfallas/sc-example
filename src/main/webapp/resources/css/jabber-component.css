@@ -238,10 +238,11 @@
 .cd-panel-container {
     position: fixed;
     width: 540px;
-    height: 670px;
+    height: 615px;
     top: 0;
     background: #dbe2e9;
     z-index: 1;
+    overflow: hidden;
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     transition-property: transform;
