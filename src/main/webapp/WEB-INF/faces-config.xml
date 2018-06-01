@@ -13,6 +13,16 @@
         <from-outcome>success</from-outcome>
         <to-view-id>page1.xhtml</to-view-id>
     </navigation-case>
+    <navigation-case>
+        <from-action>#{pageController.processPage2}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>page1.xhtml</to-view-id>
+    </navigation-case>
+    <navigation-case>
+        <from-action>#{pageController.initConnection}</from-action>
+        <from-outcome>success</from-outcome>
+        <to-view-id>page1.xhtml</to-view-id>
+    </navigation-case>
 </navigation-rule>
 
 

@@ -1,5 +1,6 @@
 package com.sicomp.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -16,20 +17,22 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+
+import com.rabbitmq.client.*;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
- 
+import java.util.concurrent.TimeoutException;
+
 @ManagedBean(name="user")
 @SessionScoped
 public class UserBean implements Serializable{
 
     private String firstName = "Andres";
     private String lastName = "Hernandez";
-
     private String username = "andres";
 
     public String getFirstName() {
@@ -58,8 +61,7 @@ public class UserBean implements Serializable{
 
             String keyValue = "Abcdefghijklmnop";
             SecretKeyFactory factory =   SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-            KeySpec spec = new PBEKeySpec(keyValue.toCharArray(), hex("dc0da04af8fee58593442bf834b30739"),
-                    1000, 128);
+            KeySpec spec = new PBEKeySpec(keyValue.toCharArray(), hex("dc0da04af8fee58593442bf834b30739"),1000, 128);
 
             Key key = new SecretKeySpec(factory.generateSecret(spec).getEncoded(), "AES");
             Cipher c = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -67,8 +69,7 @@ public class UserBean implements Serializable{
 
             byte[] encVal = c.doFinal(username.getBytes());
             base64EncodedEncryptedData = new String(Base64.encodeBase64(encVal));
-            System.out.println(base64EncodedEncryptedData);
-
+//            System.out.println(base64EncodedEncryptedData);
 
         }catch(NoSuchAlgorithmException nsae){
             nsae.printStackTrace();
@@ -88,6 +89,8 @@ public class UserBean implements Serializable{
 
         return base64EncodedEncryptedData;
     }
+
+
 
     public static byte[] hex(String str) {
         try {

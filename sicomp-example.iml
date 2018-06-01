@@ -26,5 +26,7 @@
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.15" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.0" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
   </component>
 </module>
