@@ -33,7 +33,8 @@ public class UserBean implements Serializable{
 
     private String firstName = "Andres";
     private String lastName = "Hernandez";
-    private String username = "andres";
+    private String username = "testuser";
+    private String encryptedUsername = "";
 
     public String getFirstName() {
         return firstName;
@@ -55,7 +56,9 @@ public class UserBean implements Serializable{
         this.username = username;
     }
 
-    public String getUsername() {
+    public String getUsername() { return username; }
+
+    public String getEncryptedUsername() {
         String base64EncodedEncryptedData = "";
         try{
 
@@ -90,7 +93,9 @@ public class UserBean implements Serializable{
         return base64EncodedEncryptedData;
     }
 
-
+    public void setEncryptedUsername(String encryptedUsername) {
+        this.encryptedUsername = encryptedUsername;
+    }
 
     public static byte[] hex(String str) {
         try {

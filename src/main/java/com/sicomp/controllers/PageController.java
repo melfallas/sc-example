@@ -30,23 +30,16 @@ public class PageController implements Serializable{
 
         JabberQueueUtil.init();
 
+        JabberQueueUtil.createChannelListener("testuser");
+
+        JabberQueueUtil.createChannelListener("ahernandez");
+
         return "success";
     }
 
     public String processPage1() throws IOException, TimeoutException {
 
         System.out.println("processPage1");
-
-        JabberQueueUtil.createChannelListener("alvartabe");
-
-        return "success";
-    }
-
-    public String processPage2() throws IOException, TimeoutException {
-
-        System.out.println("processPage2");
-
-        JabberQueueUtil.createChannelListener("ahernandez");
 
         return "success";
     }
