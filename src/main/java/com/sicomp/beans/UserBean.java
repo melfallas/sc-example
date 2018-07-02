@@ -106,6 +106,13 @@ public class UserBean implements Serializable{
         }
     }
 
+    public String login() {
+
+        System.out.println(this.getUsername());
+
+        return "success";
+    }
+
 
 	
 }

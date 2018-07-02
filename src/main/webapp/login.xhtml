@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+      <h:outputStylesheet name="common-style.css" library="css" />
+      <h:outputStylesheet name="jabber-component.css" library="css" />
+      <h:outputScript library="primefaces" name="jquery/jquery-1.12.4.min.js" target="head" />
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:panel header="Fake Login">
+                <h:panelGrid columns="2" cellpadding="4">
+                    <h:outputText value="Enter your Name: " />
+                    <p:inputText value="#{user.username}" />
+                    <p:commandButton action="#{user.login}" value="Login" />
+                </h:panelGrid>
+            </p:panel>
+
+        </h:form>
+    </h:body>
+
+</html>

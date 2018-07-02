@@ -1,5 +1,6 @@
 package com.sicomp.controllers;
 
+import com.sicomp.beans.UserBean;
 import com.sicomp.util.JabberQueueUtil;
 
 import java.io.IOException;
@@ -30,9 +31,9 @@ public class PageController implements Serializable{
 
         JabberQueueUtil.init();
 
-        JabberQueueUtil.createChannelListener("testuser");
+        JabberQueueUtil.createChannelListener("andres");
 
-        JabberQueueUtil.createChannelListener("ahernandez");
+        JabberQueueUtil.createChannelListener("testuser1");
 
         return "success";
     }
